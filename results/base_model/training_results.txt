@@ -1,0 +1,54 @@
+training for 150 epochs.
+
+
+20 epochs completed in 0.473 hours.
+Optimizer stripped from C:\New folder\Model_train\Yolo_try\runs\segment\weed_detect_v3\weights\last.pt, 6.8MB
+Optimizer stripped from C:\New folder\Model_train\Yolo_try\runs\segment\weed_detect_v3\weights\best.pt, 6.8MB
+
+Validating C:\New folder\Model_train\Yolo_try\runs\segment\weed_detect_v3\weights\best.pt...
+Ultralytics 8.4.21  Python-3.12.12 torch-2.5.1 CUDA:0 (NVIDIA RTX A1000, 8188MiB)
+YOLOv8n-seg summary (fused): 86 layers, 3,258,454 parameters, 0 gradients
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Mask(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 14/14 3.0it/s 4.6s
+                   all        446       3433      0.845      0.803      0.886      0.686       0.85      0.789      0.871      0.588
+                  crop        235       2366      0.817       0.71      0.821      0.569      0.813      0.681      0.789      0.449
+                  weed        211       1067      0.873      0.896       0.95      0.803      0.887      0.896      0.953      0.727
+Speed: 0.2ms preprocess, 2.6ms inference, 0.0ms loss, 1.8ms postprocess per image
+Results saved to C:\New folder\Model_train\Yolo_try\runs\segment\weed_detect_v3
+
+============================================================
+  ✅ Training complete!
+  Best model : C:\New folder\Model_train\Yolo_try\runs\segment\weed_detect_v3\weights\best.pt
+============================================================
+
+  Box  mAP@50 : 0.8858
+  Mask mAP@50 : 0.8709
+  ✅ Good — ready for robot deployment
+
+👉 Next steps:
+   Evaluate : python train_best.py --eval
+   Export   : python export_for_pi.py
+
+  Evaluating: C:\New folder\Model_train\Yolo_try\runs\segment\weed_detect_v3\weights\best.pt
+Ultralytics 8.4.21  Python-3.12.12 torch-2.5.1 CUDA:0 (NVIDIA RTX A1000, 8188MiB)
+YOLOv8n-seg summary (fused): 86 layers, 3,258,454 parameters, 0 gradients
+val: Fast image access  (ping: 0.00.0 ms, read: 1390.11152.3 MB/s, size: 2403.7 KB)
+val: Scanning C:\New folder\Model_train\dataset\balanced\labels\val.cache... 446 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 446/446  0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Mask(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 28/28 4.4it/s 6.3s
+                   all        446       3433      0.845      0.802      0.886      0.687      0.853      0.785      0.868      0.582
+                  crop        235       2366      0.818      0.709      0.822      0.571      0.814      0.677      0.782      0.441
+                  weed        211       1067      0.873      0.895       0.95      0.804      0.891      0.893      0.953      0.724
+Speed: 1.2ms preprocess, 5.0ms inference, 0.0ms loss, 1.8ms postprocess per image
+Results saved to C:\New folder\Model_train\Yolo_try\runs\segment\val
+
+============================================================
+  EVALUATION RESULTS
+============================================================
+  Box  mAP@50    : 0.8862
+  Box  mAP@50-95 : 0.6873
+  Mask mAP@50    : 0.8677
+  Mask mAP@50-95 : 0.5822
+
+  Interpretation:
+   > 0.65 mask mAP50 = good for robot use
+   > 0.50 mask mAP50 = usable, coordinates will work
+   < 0.40 mask mAP50 = needs more training data

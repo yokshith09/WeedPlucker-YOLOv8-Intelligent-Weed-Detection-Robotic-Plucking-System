@@ -1,0 +1,7 @@
+names:
+- crop
+- weed
+nc: 2
+path: C:\NEWDRIVE\Model_train\dataset\balanced
+train: images/train
+val: images/val

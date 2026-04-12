@@ -1,0 +1,8 @@
+{
+  "threshold": 0.01308,
+  "crop_mean": 0.01208,
+  "weed_mean": 0.01409,
+  "separation": 0.238,
+  "n_crop_samples": 2366,
+  "n_weed_samples": 1067
+}

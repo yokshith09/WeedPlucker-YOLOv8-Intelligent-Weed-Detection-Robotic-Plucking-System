@@ -1,0 +1,64 @@
+# Model weights (large binary files)
+*.pt
+*.onnx
+*.pth
+*.safetensors
+*_ncnn_model/
+*.ncnn.*
+
+# Dataset (images + labels too large for git)
+dataset/
+images/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+!results/**/*.jpg
+!results/**/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# YOLO cache
+*.cache
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Jupyter
+*.ipynb
+
+# Logs
+*.log
+
+# Temp
+tmp/
+temp/
+scratch/
