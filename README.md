@@ -1,7 +1,7 @@
 # 🌿 WeedPlucker-YOLOv8 — Intelligent Weed Detection & Robotic Plucking System
 
 <p align="center">
-  <img src="results/base_model/results.png" alt="Training Results" width="800"/>
+  <img src="Training_results/base_model/results.png" alt="Training Results" width="800"/>
 </p>
 
 > **A complete pipeline for training, evaluating, and deploying YOLOv8-segmentation models for precision weed detection in cauliflower fields — optimized for Raspberry Pi robotic deployment.**
@@ -19,8 +19,9 @@
 - [Model Comparison](#-model-comparison)
 - [Deployment](#-deployment)
 - [Dataset](#-dataset)
+- [Open Source Availability](#-open-source-availability)
 - [Citation](#-citation)
-- [License](#-license)
+- [License][def]
 
 ---
 
@@ -55,7 +56,6 @@ Camera → YOLOv8n-seg → Instance Masks + BBoxes → Centroid Extraction → R
 |---------|-------------|
 | **Dual-class segmentation** | Segments both cauliflower (crop) and weed instances |
 | **SimCLR self-supervised pretraining** | Backbone pretrained on unlabelled field images via contrastive learning |
-| **Anomaly detection pipeline** | Reconstruction-based anomaly head for annotation-free weed detection |
 | **Class imbalance handling** | Dynamic class weighting + `copy_paste` augmentation for weed minority |
 | **Edge deployment** | ONNX + NCNN export, optimized for Raspberry Pi 4/5 ARM inference |
 | **Robot-ready output** | JSON with pixel coordinates, normalized coordinates, and action commands |
@@ -99,15 +99,8 @@ WeedPlucker-YOLOv8/
 │   ├── export/
 │   │   ├── export_onnx.py                   # Export YOLOv8-seg → ONNX (Pi-optimized)
 │   │   └── export_ncnn_pi.py                # Export → NCNN for Pi 4
-│   │
-│   └── anomaly_detection/                   # AnomalyYOLO research pipeline
-│       ├── step1_extract_crops.py           # Extract crop instances for autoencoder
-│       ├── step2_train_anomaly_head.py      # Train reconstruction anomaly head
-│       ├── step3_combined_inference.py      # YOLO + anomaly combined inference
-│       ├── step4_export_and_quantize.py     # Export + INT8 quantize for Pi
-│       └── README_AnomalyYOLO.md            # Detailed anomaly pipeline docs
 │
-├── results/
+├── Training_results/
 │   ├── base_model/                          # YOLOv8n-seg base model results
 │   │   ├── args.yaml                        # Training configuration
 │   │   ├── results.csv                      # Per-epoch metrics
@@ -127,16 +120,10 @@ WeedPlucker-YOLOv8/
 │   │   ├── confusion_matrix.png
 │   │   ├── pretrain_log.txt                 # SimCLR pretraining log
 │   │   └── retrain_log.txt                  # Fine-tuning log
-│   │
-│   ├── onnx_inference_samples/              # ONNX inference test outputs
-│   │   ├── IMG1_result.jpg
-│   │   └── image_result.jpg
-│   │
-│   └── anomaly_detection/
-│       └── threshold.json                   # Calibrated anomaly threshold
 │
-└── configs/
-    └── dataset.yaml                         # Dataset config (nc=2, crop/weed)
+├── test_images/                             # Raw image files used for testing and evaluation
+├── tests/                                   # Legacy test scripts and earlier model iterations
+└── weights/                                 # Saved YOLO model weights (.pt, .onnx)
 ```
 
 ---
@@ -355,26 +342,28 @@ val: images/val
 ```
 
 > **Note:** The dataset and model weights are not included in this repository due to size constraints.
-> See the [Publishing & Hosting](#-where-to-publish) section for links.
+> See the [Open Source Availability](#-open-source-availability) section for links.
 
 ---
 
-## 📤 Where to Publish
+## 🌍 Open Source Availability
 
-### Models & Weights
-- **[Hugging Face Hub](https://huggingface.co/)** — Upload `.pt` and `.onnx` models, create a Model Card
-- **[Roboflow Universe](https://universe.roboflow.com/)** — Host models + dataset together
-- **[GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github)** — Attach model files to a GitHub Release
+In the spirit of advancing agricultural robotics and computer vision, this project is fully open-sourced. We encourage researchers, developers, and the agricultural community to use, modify, and build upon our work.
 
-### Dataset
-- **[Roboflow Universe](https://universe.roboflow.com/)** — Best for YOLO datasets with annotations
-- **[Kaggle Datasets](https://www.kaggle.com/datasets)** — High visibility, DOI citable
-- **[Hugging Face Datasets](https://huggingface.co/datasets)** — Integrated with model ecosystem
-- **[Zenodo](https://zenodo.org/)** — Academic DOI, citable in papers
+### 🗂️ Dataset Links
+
+The complete annotated dataset containing both cauliflower (crop) and weeds is publicly available for download:
+- **[Download Dataset (Roboflow/Kaggle) - CLICK HERE]({INSERT_DATASET_LINK_HERE})**
+
+### 📦 Pre-trained Models
+
+The trained model weights (both PyTorch `.pt` and optimized `.onnx` formats) can be downloaded here:
+- **[Download Model Weights - CLICK HERE]({INSERT_MODEL_LINK_HERE})**
+
+*(Note: Please replace the placeholder links above with the actual URLs once uploaded)*
 
 ### Paper / Research
 - **[Papers With Code](https://paperswithcode.com/)** — Link model, code, and benchmark
-- **[arXiv](https://arxiv.org/)** — Preprint for the AnomalyYOLO paper
 - **[IEEE / MDPI Agriculture](https://www.mdpi.com/journal/agriculture)** — Peer-reviewed journal
 
 ---
@@ -412,3 +401,6 @@ This project is released under the [MIT License](LICENSE).
 <p align="center">
   <b>🌱 Built for smarter, sustainable agriculture 🌱</b>
 </p>
+
+
+[def]: #-license

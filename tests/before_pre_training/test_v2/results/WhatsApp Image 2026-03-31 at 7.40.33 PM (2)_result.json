@@ -1,0 +1,69 @@
+{
+  "image": "WhatsApp Image 2026-03-31 at 7.40.33 PM (2).jpeg",
+  "size_px": {
+    "w": 719,
+    "h": 1600
+  },
+  "Z_fixed_mm": 50,
+  "settings": {
+    "conf_crop": 0.4,
+    "conf_weed": 0.2,
+    "imgsz": 1280,
+    "sky_frac": 0.3,
+    "max_mask_frac": 0.4,
+    "overlap_thresh": 0.6
+  },
+  "cauliflower": [],
+  "weeds": [
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.653,
+      "centroid": {
+        "x": 87,
+        "y": 1178
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 0,
+        "y1": 885,
+        "x2": 242,
+        "y2": 1356
+      },
+      "mask_area": 44894
+    },
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.596,
+      "centroid": {
+        "x": 360,
+        "y": 1454
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 0,
+        "y1": 1256,
+        "x2": 719,
+        "y2": 1597
+      },
+      "mask_area": 192141
+    }
+  ],
+  "robot": {
+    "action": "MOVE_TO_WEED",
+    "target": {
+      "x": 87,
+      "y": 1178,
+      "Z_mm": 50
+    },
+    "offset_x_px": -272,
+    "offset_y_px": 378
+  },
+  "stats": {
+    "n_crop": 0,
+    "n_weed": 2,
+    "raw_crop": 2,
+    "raw_weed": 2
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "image": "img_259.jpg",
+  "size": {
+    "w": 2304,
+    "h": 4096
+  },
+  "z_mm": 50,
+  "conf_used": 0.15,
+  "crops": [
+    {
+      "cls": 0,
+      "name": "crop",
+      "conf": 0.963,
+      "cx": 1457,
+      "cy": 1889,
+      "z": 50,
+      "cx_norm": 0.6324,
+      "cy_norm": 0.4612,
+      "bbox": [
+        150,
+        1031,
+        2304,
+        2985
+      ],
+      "area": 2066577
+    },
+    {
+      "cls": 0,
+      "name": "crop",
+      "conf": 0.673,
+      "cx": 1049,
+      "cy": 729,
+      "z": 50,
+      "cx_norm": 0.4553,
+      "cy_norm": 0.178,
+      "bbox": [
+        1000,
+        692,
+        1068,
+        781
+      ],
+      "area": 3337
+    }
+  ],
+  "weeds": [],
+  "robot": {
+    "action": "SCAN",
+    "x": null,
+    "y": null,
+    "z": 50,
+    "n_weeds": 0,
+    "n_crops": 2
+  }
+}

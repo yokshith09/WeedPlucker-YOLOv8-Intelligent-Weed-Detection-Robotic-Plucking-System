@@ -1,0 +1,37 @@
+{
+  "image": "img_260.jpg",
+  "size": {
+    "w": 2304,
+    "h": 4096
+  },
+  "z_mm": 50,
+  "conf_used": 0.15,
+  "crops": [
+    {
+      "cls": 0,
+      "name": "crop",
+      "conf": 0.951,
+      "cx": 1540,
+      "cy": 1882,
+      "z": 50,
+      "cx_norm": 0.6684,
+      "cy_norm": 0.4595,
+      "bbox": [
+        351,
+        1045,
+        2304,
+        3026
+      ],
+      "area": 1841032
+    }
+  ],
+  "weeds": [],
+  "robot": {
+    "action": "SCAN",
+    "x": null,
+    "y": null,
+    "z": 50,
+    "n_weeds": 0,
+    "n_crops": 1
+  }
+}

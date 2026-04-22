@@ -1,0 +1,114 @@
+{
+  "image": "IMG_20250904_162411_1.jpg",
+  "size_px": {
+    "w": 2448,
+    "h": 3264
+  },
+  "Z_fixed_mm": 50,
+  "settings": {
+    "conf_crop": 0.4,
+    "conf_weed": 0.2,
+    "imgsz": 1280,
+    "sky_frac": 0.3,
+    "max_mask_frac": 0.4,
+    "overlap_thresh": 0.6
+  },
+  "cauliflower": [
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.957,
+      "centroid": {
+        "x": 1563,
+        "y": 1949
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 1437,
+        "y1": 1837,
+        "x2": 1686,
+        "y2": 2061
+      },
+      "mask_area": 42294
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.905,
+      "centroid": {
+        "x": 2377,
+        "y": 1176
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 2278,
+        "y1": 1099,
+        "x2": 2447,
+        "y2": 1285
+      },
+      "mask_area": 22310
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.899,
+      "centroid": {
+        "x": 1195,
+        "y": 1607
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 981,
+        "y1": 1365,
+        "x2": 1421,
+        "y2": 1849
+      },
+      "mask_area": 60646
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.898,
+      "centroid": {
+        "x": 1401,
+        "y": 1380
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 1210,
+        "y1": 1181,
+        "x2": 1559,
+        "y2": 1559
+      },
+      "mask_area": 70975
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.842,
+      "centroid": {
+        "x": 51,
+        "y": 1003
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 0,
+        "y1": 919,
+        "x2": 120,
+        "y2": 1095
+      },
+      "mask_area": 16062
+    }
+  ],
+  "weeds": [],
+  "robot": {
+    "action": "SCAN",
+    "target": null
+  },
+  "stats": {
+    "n_crop": 5,
+    "n_weed": 0,
+    "raw_crop": 24,
+    "raw_weed": 0
+  }
+}

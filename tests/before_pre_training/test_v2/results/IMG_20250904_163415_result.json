@@ -1,0 +1,206 @@
+{
+  "image": "IMG_20250904_163415.jpg",
+  "size_px": {
+    "w": 3072,
+    "h": 4096
+  },
+  "Z_fixed_mm": 50,
+  "settings": {
+    "conf_crop": 0.4,
+    "conf_weed": 0.2,
+    "imgsz": 1280,
+    "sky_frac": 0.3,
+    "max_mask_frac": 0.4,
+    "overlap_thresh": 0.6
+  },
+  "cauliflower": [
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.889,
+      "centroid": {
+        "x": 1953,
+        "y": 3251
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 1640,
+        "y1": 3024,
+        "x2": 2237,
+        "y2": 3467
+      },
+      "mask_area": 128111
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.889,
+      "centroid": {
+        "x": 2897,
+        "y": 3774
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 2664,
+        "y1": 3484,
+        "x2": 3070,
+        "y2": 4072
+      },
+      "mask_area": 114937
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.863,
+      "centroid": {
+        "x": 440,
+        "y": 4057
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 334,
+        "y1": 4001,
+        "x2": 549,
+        "y2": 4095
+      },
+      "mask_area": 15091
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.715,
+      "centroid": {
+        "x": 1087,
+        "y": 3918
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 910,
+        "y1": 3712,
+        "x2": 1226,
+        "y2": 4095
+      },
+      "mask_area": 85557
+    },
+    {
+      "class_id": 0,
+      "class_name": "cauliflower",
+      "conf": 0.535,
+      "centroid": {
+        "x": 2772,
+        "y": 2580
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 2707,
+        "y1": 2506,
+        "x2": 2834,
+        "y2": 2665
+      },
+      "mask_area": 12603
+    }
+  ],
+  "weeds": [
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.267,
+      "centroid": {
+        "x": 1010,
+        "y": 1853
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 4,
+        "y1": 1083,
+        "x2": 2044,
+        "y2": 3018
+      },
+      "mask_area": 2445233
+    },
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.327,
+      "centroid": {
+        "x": 461,
+        "y": 2489
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 414,
+        "y1": 2440,
+        "x2": 504,
+        "y2": 2538
+      },
+      "mask_area": 7453
+    },
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.347,
+      "centroid": {
+        "x": 197,
+        "y": 2913
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 141,
+        "y1": 2860,
+        "x2": 250,
+        "y2": 2961
+      },
+      "mask_area": 8790
+    },
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.299,
+      "centroid": {
+        "x": 2689,
+        "y": 3477
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 2606,
+        "y1": 3384,
+        "x2": 2769,
+        "y2": 3577
+      },
+      "mask_area": 17171
+    },
+    {
+      "class_id": 1,
+      "class_name": "weed",
+      "conf": 0.346,
+      "centroid": {
+        "x": 2098,
+        "y": 3940
+      },
+      "Z_mm": 50,
+      "bbox": {
+        "x1": 1719,
+        "y1": 3727,
+        "x2": 2463,
+        "y2": 4094
+      },
+      "mask_area": 139946
+    }
+  ],
+  "robot": {
+    "action": "MOVE_TO_WEED",
+    "target": {
+      "x": 1010,
+      "y": 1853,
+      "Z_mm": 50
+    },
+    "offset_x_px": -526,
+    "offset_y_px": -195
+  },
+  "stats": {
+    "n_crop": 5,
+    "n_weed": 5,
+    "raw_crop": 31,
+    "raw_weed": 5
+  }
+}
