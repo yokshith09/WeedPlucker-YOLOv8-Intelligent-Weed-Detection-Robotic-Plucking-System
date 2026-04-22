@@ -13,8 +13,8 @@ images/
 *.jpeg
 *.png
 *.bmp
-!results/**/*.jpg
-!results/**/*.png
+!Training_results/**/*.jpg
+!Training_results/**/*.png
 
 # Python
 __pycache__/
