@@ -230,6 +230,15 @@ python scripts/training/train_best.py \
 
 ## 🔧 Pipeline Stages
 
+### 🔄 Detailed Workflow
+
+1. **Collect Images**: The first step is collecting raw field images of your crops and weeds.
+2. **Auto-Annotation**: Use the automation scripts to generate your initial labels. 
+   - *Note:* The weed automation script performs very well out of the box, but the cauliflower script is a baseline and may require fine-tuning or manual correction.
+3. **Build Dataset**: After running the automation scripts, use `build_dataset.py` to merge the images, balance the classes, and split the data into training and validation sets.
+4. **Verify Annotations**: Carefully check the generated annotations to ensure they are accurate before moving forward.
+5. **Train the Model**: Once the dataset is built and verified, run the training script (`train_best.py`) to start training your YOLOv8 model.
+
 ### Stage 1: Data Preparation
 
 ```mermaid
